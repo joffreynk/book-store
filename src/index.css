@@ -38,6 +38,10 @@ body {
   gap: 15px;
 }
 
+button {
+  cursor: pointer;
+}
+
 .changestatus button {
   color: rgb(88, 88, 167);
   border: none;
@@ -123,4 +127,11 @@ a {
   background-color: rgb(0, 153, 255);
   border: none;
   border-radius: 5%;
+}
+
+.checkstatus {
+  padding: 20px;
+  font-size: 25px;
+  border: none;
+  border-radius: 15px;
 }

@@ -6,7 +6,6 @@ import {
 
 import Categories from './Categories';
 import Books from './component/Books';
-import Form from './component/Form';
 import Header from './component/Header';
 
 const books = [
@@ -16,23 +15,23 @@ const books = [
     author: 'Suzanne Collins',
     category: 'action',
     completed: 64,
-    chapiter: 'chapiter 17',
+    chapter: 'chapiter 17',
   },
   {
-    id: 1,
+    id: 2,
     title: 'Dune',
     author: 'Frank Herbert',
     category: 'Science Fiction',
     completed: 8,
-    chapiter: 'Chapter 3: "A Lesson Learned"',
+    chapter: 'Chapter 3: "A Lesson Learned"',
   },
   {
-    id: 1,
+    id: 3,
     title: 'Capital in the Twenty-First Century',
     author: 'Suzanne Collins',
     category: 'Economy',
     completed: 0,
-    chapiter: 'Introduction',
+    chapter: 'Introduction',
   },
 ];
 
@@ -46,7 +45,7 @@ function App() {
           <Route path="categories" element={<Categories />} />
         </Routes>
       </BrowserRouter>
-      <Form />
+
     </div>
   );
 }
