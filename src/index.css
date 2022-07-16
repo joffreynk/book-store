@@ -1,27 +1,126 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+body {
+  background-color: rgb(212, 212, 212);
+}
+
+.app {
+  margin: 15px 5%;
+  border: 1px solid #fff;
+}
+
+.inline-display {
+  display: flex;
+  justify-content: space-between;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.book {
+  border: 1px solid rgb(219, 215, 215);
+  background-color: #fff;
+  padding: 20px 30px 25px 25px;
+}
+
+.changestatus {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.changestatus button {
+  color: rgb(88, 88, 167);
+  border: none;
+  background-color: inherit;
+  font-size: 17px;
+}
+
+.bookinfo,
+.updateprogress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.updateprogress {
+  gap: 12px;
+}
+
+.action {
+  color: gray;
+  font-size: 20px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.author {
+  color: rgb(88, 88, 167);
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  padding: 15px;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  color: rgb(0, 153, 255);
+}
+
+.updateprogressbtn {
+  padding: 7px 10px;
+  background-color: rgb(0, 153, 255);
+  border-radius: 4px;
+  border: none;
+}
+
+.form {
+  background-color: #fff;
+  padding: 25px 15px;
+}
+
+.form > * {
+  padding: 10px;
+}
+
+.from-inputs {
+  display: flex;
+  gap: 20px;
+}
+
+.from-inputs > * {
+  height: 50px;
+  flex-grow: 1;
+}
+
+.select {
+  font-size: 18px;
+}
+
+.add-title {
+  font-size: 20px;
+}
+
+.addbtn {
+  flex-grow: 0.3;
+  background-color: rgb(0, 153, 255);
+  border: none;
+  border-radius: 5%;
 }
