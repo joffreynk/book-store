@@ -1,62 +1,43 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# book store
 
-> Description the project.
-
+> it helps to add and read books online. you can comment, edit and remove the book. You can also track its progress
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Reactjs
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+**clone the project by running:
+
+```
+$ git clone https://github.com/JoffreyNK/book-store.git
+
+cd book-store
+
+npm install
+
+npm start
+```
 
 
-To get a local copy up and running follow these simple example steps.
+## Author
 
-### Prerequisites
+👤 **Joffrey**
 
-### Setup
+- GitHub: [@joffreynk](https://github.com/JoffreyNK)
+- Twitter: [@joffreynk](https://twitter.com/joffreynk)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/joffrey-nkeshimana-15b8aa1b3/)
 
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
+Feel free to comment in issues section any bugs or changes that you would like to apply on this project
+check the [issues page](../../issues/).
 
 ## Show your support
 
@@ -64,9 +45,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+This work was done in collaborative teams  and you cannot find it anywhere else
 
 ## 📝 License
 
