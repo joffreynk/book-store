@@ -132,7 +132,27 @@ a {
 
 .checkstatus {
   padding: 20px;
-  font-size: 25px;
+  font-size: 30px;
   border: none;
   border-radius: 15px;
+  margin: auto 30%;
+  font-weight: 700;
+  text-shadow: 1px 1px blue;
+}
+
+#error {
+  color: red;
+}
+
+.construct {
+  font-size: 30px;
+  text-shadow: 2px 2px blue;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.categories {
+  margin-bottom: 50px;
 }

@@ -1,27 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
 const BookInfo = ({
   title, author, category, id,
-}) => (
-  <div className="bookinfo">
-    <p className="action">{category}</p>
-    <p className="title">{title}</p>
-    <p className="author">
-      {author}
-      {' '}
-    </p>
-    <div className="changestatus">
-      <button type="button" id={`comment${id}`}>comments</button>
-      {' '}
-      |
-      <button type="button" id={`remove${id}`}>Remove</button>
-      {' '}
-      |
-      <button type="button" id={`edit${id}`}>Edit</button>
+}) => {
+  const dispatch = useDispatch();
+  return (
+    <div className="bookinfo">
+      <p className="action">{category}</p>
+      <p className="title">{title}</p>
+      <p className="author">
+        {author}
+        {' '}
+      </p>
+      <div className="changestatus">
+        <button type="button" id={`comment${id}`}>comments</button>
+        {' '}
+        |
+        <button type="button" id={`remove${id}`} onClick={() => dispatch(removeBook(id))}>Remove</button>
+        {' '}
+        |
+        <button type="button" id={`edit${id}`}>Edit</button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 BookInfo.propTypes = {
   id: PropTypes.number.isRequired,
