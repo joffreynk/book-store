@@ -1,5 +1,5 @@
 // category check action
-const CHECK_STATUS = 'CHECK_STATUS';
+const CHECK_STATUS = 'boo-store/categories/CHECK_STATUS';
 
 // category check action creator
 export const checkStatus = (id) => (dispatch) => dispatch({ type: CHECK_STATUS, payload: id });

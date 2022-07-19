@@ -1,6 +1,6 @@
 // books actions
-const ADD_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
+const ADD_BOOK = 'boo-store/books/ADD_BOOK';
+const REMOVE_BOOK = 'boo-store/books/REMOVE_BOOK';
 
 // books action creators
 export const addBook = (book) => (dispatch) => dispatch({ type: ADD_BOOK, payload: book });
