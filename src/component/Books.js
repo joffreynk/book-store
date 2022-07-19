@@ -1,45 +1,32 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import Form from './Form';
 
-const Books = ({ books }) => (
-  <div className="books">
-    {books.map((book) => {
-      const {
-        id,
-        title,
-        author,
-        category,
-        completed,
-        chapter,
-      } = book;
-      return (
-        <Book
-          key={book.id}
-          id={id}
-          title={title}
-          author={author}
-          category={category}
-          completed={completed}
-          chapter={chapter}
-        />
-      );
-    })}
-    <Form />
-  </div>
-);
-
-Books.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.shape(
-    {
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-      completed: PropTypes.number.isRequired,
-      chapter: PropTypes.string.isRequired,
-    },
-  )).isRequired,
+const Books = () => {
+  const books = useSelector((store) => store.books);
+  return (
+    <div className="books">
+      {books.map((book) => {
+        const {
+          id,
+          title,
+          author,
+          category,
+        } = book;
+        return (
+          <Book
+            key={book.id}
+            id={id}
+            title={title}
+            author={author}
+            category={category}
+          />
+        );
+      })}
+      <Form />
+    </div>
+  );
 };
 
 export default Books;

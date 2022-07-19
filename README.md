@@ -7,6 +7,8 @@
 ## Built With
 
 - Reactjs
+- Redux
+- CSS
 
 
 

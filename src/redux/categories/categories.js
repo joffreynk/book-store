@@ -1,14 +1,14 @@
 // category check action
-const CHECK_STATUS = 'boo-store/categories/CHECK_STATUS';
+const CHECK_STATUS = 'book-store/categories/CHECK_STATUS';
 
 // category check action creator
-export const checkStatus = (id) => (dispatch) => dispatch({ type: CHECK_STATUS, payload: id });
+export const checkStatus = () => (dispatch) => dispatch({ type: CHECK_STATUS });
 
 // category reducer
 const reducerCategories = (state = [], action) => {
   switch (action.type) {
     case CHECK_STATUS:
-      return state.filter(((book) => book.id === action.payload));
+      return 'Under Construction';
     default:
       return state;
   }

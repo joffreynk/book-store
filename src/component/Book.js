@@ -9,8 +9,6 @@ const Book = ({
   title,
   author,
   category,
-  completed,
-  chapter,
 }) => (
   <div className="book inline-display">
     <BookInfo
@@ -20,12 +18,10 @@ const Book = ({
       category={category}
     />
     <Progress
-      completed={completed}
       id={id}
     />
     <CurrentBook
       id={id}
-      chapter={chapter}
     />
   </div>
 );
@@ -33,8 +29,6 @@ Book.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  completed: PropTypes.number.isRequired,
-  chapter: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
 };
 
