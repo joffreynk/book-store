@@ -118,7 +118,8 @@ a {
   font-size: 18px;
 }
 
-.add-title {
+.add-title,
+.add-author {
   font-size: 20px;
 }
 
