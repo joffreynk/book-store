@@ -5,8 +5,8 @@ import {
 } from 'react-router-dom';
 
 import Categories from './Categories';
-import Books from './component/Books';
-import Header from './component/Header';
+import Books from './Books';
+import Header from './Header';
 
 const books = [
   {

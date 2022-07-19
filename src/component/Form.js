@@ -5,6 +5,7 @@ const Form = () => (
     <h2>ADD NEW BOOK</h2>
     <form className="from-inputs">
       <input type="text" placeholder="Book title" id="book-title" className="add-title" />
+      <input type="text" placeholder="Book author" id="book-author" className="add-author" />
       <select className="select">
         <option value="action">action</option>
         <option value="Science Fiction">Science Fiction</option>
