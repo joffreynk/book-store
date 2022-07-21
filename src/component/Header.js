@@ -15,7 +15,9 @@ const Header = () => (
         <Link to="categories">CATEGORIES</Link>
       </nav>
     </div>
-    <FaUserAlt className="styleIcon" />
+    <div className="headerIcon">
+      <FaUserAlt className="styleIcon" />
+    </div>
   </div>
 );
 

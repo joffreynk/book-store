@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(241, 241, 241);
+  background-color: #fafafa;
 }
 
 .app {
@@ -27,12 +27,22 @@ body {
   margin-bottom: auto;
 }
 
-.styleIcon {
-  color: blue;
-  font-size: 50px;
-  padding: 15px;
+.headerIcon {
   border: 1px solid lightblue;
   border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.styleIcon {
+  color: blue;
+  font-size: 13px;
+  padding: 5px;
+  text-align: center;
+}
+
+.styleIcon:hover {
+  cursor: pointer;
 }
 
 .books {
@@ -136,11 +146,6 @@ a {
   font-size: 18px;
 }
 
-.add-title,
-.add-author {
-  font-size: 20px;
-}
-
 .addbtn {
   flex-grow: 0.3;
   background-color: rgb(0, 153, 255);
@@ -212,6 +217,15 @@ a {
   width: 3px;
   height: 100px;
   background-color: rgba(148, 148, 148, 0.4);
+}
+
+.add-title,
+.add-author,
+.select {
+  font-size: 20px;
+  outline: none;
+  border: 1px solid rgb(243, 238, 238);
+  padding-left: 10px;
 }
 
 @media only screen and (min-width: 600px) {
