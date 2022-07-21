@@ -24,6 +24,7 @@ body {
   display: flex;
   margin-top: auto;
   gap: 20px;
+  margin-bottom: auto;
 }
 
 .styleIcon {
