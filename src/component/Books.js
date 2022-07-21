@@ -1,29 +1,32 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+/* eslint-disable camelcase */
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getBooks } from '../redux/books/books2';
 import Book from './Book';
 import Form from './Form';
 
 const Books = () => {
   const books = useSelector((store) => store.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
   return (
     <div className="books">
-      {books.map((book) => {
+      {books.length > 0 ? books.map((book) => {
         const {
-          id,
-          title,
-          author,
-          category,
+          item_id, title, author, category,
         } = book;
         return (
           <Book
-            key={book.id}
-            id={id}
+            key={item_id}
+            id={item_id}
             title={title}
             author={author}
             category={category}
           />
         );
-      })}
+      }) : ''}
       <Form />
     </div>
   );
