@@ -1,6 +1,7 @@
 import React from 'react';
+import uuid from 'react-uuid';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { addBook } from '../redux/books/books2';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,9 @@ const Form = () => {
     const author = authorInput.value;
     const category = categoryInput.value;
     if (title.length && author.length && category.length) {
-      dispatch(addBook({ title, author, category }));
+      dispatch(addBook({
+        item_id: uuid().split('-').join('').slice(0, 11), title, author, category,
+      }));
       titleInput.value = '';
       authorInput.value = '';
       document.getElementById('error').innerHTML = '';

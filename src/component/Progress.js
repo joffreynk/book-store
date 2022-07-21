@@ -9,7 +9,7 @@ const Progress = ({ id }) => (
 );
 
 Progress.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Progress;
