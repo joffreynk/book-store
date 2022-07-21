@@ -20,6 +20,20 @@ body {
   justify-content: space-between;
 }
 
+.home-menu {
+  display: flex;
+  margin-top: auto;
+  gap: 20px;
+}
+
+.styleIcon {
+  color: blue;
+  font-size: 50px;
+  padding: 15px;
+  border: 1px solid lightblue;
+  border-radius: 50%;
+}
+
 .books {
   display: flex;
   flex-direction: column;
@@ -77,6 +91,8 @@ button {
 
 a {
   text-decoration: none;
+  padding-left: 20px;
+  color: rgb(196, 189, 189);
 }
 
 .header {
