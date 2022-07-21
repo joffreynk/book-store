@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(212, 212, 212);
+  background-color: rgb(241, 241, 241);
 }
 
 .app {
@@ -24,6 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  justify-content: center;
 }
 
 .book {
@@ -155,4 +156,48 @@ a {
 
 .categories {
   margin-bottom: 50px;
+}
+
+.progress-part {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.pro {
+  width: 100px;
+  height: 100px;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.cuurent,
+.progresstext {
+  opacity: 0.4;
+}
+
+.progressValue {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.progressData {
+  font-size: 40px;
+}
+
+.stickBar {
+  width: 3px;
+  height: 100px;
+  background-color: rgba(148, 148, 148, 0.4);
+}
+
+@media only screen and (min-width: 600px) {
+  .progress-part {
+    gap: 100px;
+  }
 }

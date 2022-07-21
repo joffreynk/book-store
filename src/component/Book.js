@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import BookInfo from './BookInfo';
 import CurrentBook from './CurrentBook';
@@ -9,22 +9,30 @@ const Book = ({
   title,
   author,
   category,
-}) => (
-  <div className="book inline-display">
-    <BookInfo
-      id={id}
-      title={title}
-      author={author}
-      category={category}
-    />
-    <Progress
-      id={id}
-    />
-    <CurrentBook
-      id={id}
-    />
-  </div>
-);
+}) => {
+  const [progressState, setProgress] = useState(Math.floor(Math.random() * 100));
+  return (
+    <div className="book inline-display">
+      <BookInfo
+        id={id}
+        title={title}
+        author={author}
+        category={category}
+      />
+      <div className="progress-part">
+        <Progress
+          id={id}
+          progressState={progressState}
+        />
+        <div className="stickBar" />
+        <CurrentBook
+          setProgress={setProgress}
+          id={id}
+        />
+      </div>
+    </div>
+  );
+};
 Book.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
