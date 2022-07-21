@@ -20,7 +20,13 @@ export const getBooks = createAsyncThunk(
   async () => {
     const { url } = fetched(1, 'GET');
     const res = await fetch(url);
-    return res.data;
+    const result = await res.json();
+    const data = [];
+    /* eslint-disable */
+    for (const [key, value] of Object.entries(result)) {
+      data.push({ id: key, ...value[0] });
+    }
+    return data;
   },
 );
 
@@ -28,18 +34,22 @@ export const addBook = createAsyncThunk(
   ADD_BOOK,
   async (book) => {
     const { url, header } = fetched(book, 'POST');
-    const res = await fetch(url, header);
-    console.log(res.ok);
-    return res.data;
+    await fetch(url, header);
+    return { ...book,id: book.item_id};
   },
 );
 
 export const removeBook = createAsyncThunk(
   REMOVE_BOOK,
-  async ({ id }) => {
-    const { url } = fetched(id, 'DELETE');
-    await fetch(`${url}${url}`);
-    return { id };
+  async (id) => {
+    await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/B1JICHLslKFVZ0PibsXC/books/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    
+    return id;
   },
 );
 
@@ -53,8 +63,7 @@ const bookSlice = createSlice({
     },
     [getBooks.fulfilled]: (state, action) => [...action.payload],
     [removeBook.fulfilled]: (state, action) => {
-      const index = state.findIndex(({ id }) => id === action.payload.id);
-      state.splice(index, 1);
+      return state.filter((item) => item.id !== action.payload)
     },
   },
 });

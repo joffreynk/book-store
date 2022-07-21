@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getBooks } from '../redux/books/books2';
@@ -15,12 +14,12 @@ const Books = () => {
     <div className="books">
       {books.length > 0 ? books.map((book) => {
         const {
-          item_id, title, author, category,
+          id, title, author, category,
         } = book;
         return (
           <Book
-            key={item_id}
-            id={item_id}
+            key={id}
+            id={id}
             title={title}
             author={author}
             category={category}

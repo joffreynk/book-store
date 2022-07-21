@@ -14,7 +14,7 @@ const Form = () => {
     const category = categoryInput.value;
     if (title.length && author.length && category.length) {
       dispatch(addBook({
-        item_id: uuid().slice(1, 9), title, author, category,
+        item_id: uuid().split('-').join('').slice(0, 11), title, author, category,
       }));
       titleInput.value = '';
       authorInput.value = '';
